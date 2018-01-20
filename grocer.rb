@@ -67,9 +67,10 @@ def checkout(cart, coupons)
   sub_total = 0
   pre_discount.each do |food, worth|
     if cart[food][:count] > 0
-      sub_total += (cart[food][:price] * cart[food][:count]) 
+      sub_total += (cart[food][:price] * cart[food][:count])
     end
   end
-  
-  
+
+  print sub_total
+  sub_total
 end
