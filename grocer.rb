@@ -73,7 +73,7 @@ def checkout(cart, coupons)
   end
 
   if sub_total > 100
-    return sub_total.to_f * (9/10).to_f
+    return sub_total.to_f * .9.to_f
   else
     return sub_total
   end
