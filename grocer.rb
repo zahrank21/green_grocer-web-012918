@@ -62,7 +62,7 @@ end
 
 def checkout(cart, coupons)
   consolidated = consolidate_cart(card)
-  couponed_cart = apply_coupons(cart, coupons)
+  couponed_cart = apply_coupons(consolidated, coupons)
   pre_discount = apply_clearance(couponed_cart)
 
   print pre_discount
