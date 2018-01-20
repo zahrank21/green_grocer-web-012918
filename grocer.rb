@@ -64,7 +64,12 @@ def checkout(cart, coupons)
   consolidated = consolidate_cart(cart)
   couponed_cart = apply_coupons(consolidated, coupons)
   pre_discount = apply_clearance(couponed_cart)
-
-  print pre_discount
-  pre_discount
+  sub_total = 0
+  pre_discount.each do |food, worth|
+    if cart[food][:count] > 0
+      sub_total += (cart[food][:price] * cart[food][:count]) 
+    end
+  end
+  
+  
 end
